@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+    <!-- Use Tailwind CSS for a clean, modern look. -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <!-- Calculator display screen -->
+        <div class="display" id="display">0</div>
+        <!-- Button grid -->
+        <div class="buttons">
+            <div class="button clear" onclick="clearDisplay()">AC</div>
+            <div class="button operator" onclick="appendOperator('/')">/</div>
+            <div class="button operator" onclick="appendOperator('*')">x</div>
+            <div class="button operator" onclick="appendOperator('-')">-</div>
+            
+            <div class="button" onclick="appendNumber(7)">7</div>
+            <div class="button" onclick="appendNumber(8)">8</div>
+            <div class="button" onclick="appendNumber(9)">9</div>
+            <div class="button operator" onclick="appendOperator('+')">+</div>
+
+            <div class="button" onclick="appendNumber(4)">4</div>
+            <div class="button" onclick="appendNumber(5)">5</div>
+            <div class="button" onclick="appendNumber(6)">6</div>
+            <div class="button operator" onclick="appendOperator('%')">%</div>
+
+            <div class="button" onclick="appendNumber(1)">1</div>
+            <div class="button" onclick="appendNumber(2)">2</div>
+            <div class="button" onclick="appendNumber(3)">3</div>
+            <div class="button operator" onclick="appendOperator('^')">^</div>
+
+            <div class="button zero" onclick="appendNumber(0)">0</div>
+            <div class="button" onclick="appendNumber('.')">.</div>
+            <div class="button equal" onclick="calculate()">=</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
